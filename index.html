@@ -806,94 +806,77 @@
 
       <!-- REPORT TAB -->
       <div id="dt-report" class="hidden">
-        <div class="dash-top">
-          <div>
-            <div class="dash-greeting">Monthly Report — May 2026</div>
-            <div class="dash-date">Auto-generated · Sent on 1st of every month</div>
-          </div>
-          <button class="btn btn-primary" style="font-size:13px;padding:10px 20px;" onclick="downloadPDF()">Export PDF</button>
-</div>
 
-<div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="kpi-card kpi-blue"><div class="kpi-label">Total Submitted</div><div class="kpi-value">47</div><div class="kpi-change up">May 2026</div></div>
-          <div class="kpi-card kpi-green"><div class="kpi-label">Resolved</div><div class="kpi-value">38</div><div class="kpi-change up">81% rate</div></div>
-          <div class="kpi-card kpi-amber"><div class="kpi-label">Pending / Open</div><div class="kpi-value">9</div><div class="kpi-change down">3 high priority</div></div>
-        </div>
-        <div class="dash-grid">
-          <div class="panel">
-            <div class="panel-header"><div class="panel-title">Breakdown by Subcategory</div></div>
-            <div class="bar-chart" style="padding:16px 20px;">
-              <div class="bar-row"><div class="bar-lbl">General Cleaning</div><div class="bar-track"><div class="bar-fill" style="width:80%;background:var(--teal);"></div></div><div class="bar-val">14</div></div>
-              <div class="bar-row"><div class="bar-lbl">AC Issues</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--blue-500);"></div></div><div class="bar-val">11</div></div>
-              <div class="bar-row"><div class="bar-lbl">Lights</div><div class="bar-track"><div class="bar-fill" style="width:45%;background:var(--blue-400);"></div></div><div class="bar-val">8</div></div>
-              <div class="bar-row"><div class="bar-lbl">Leakage</div><div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--amber);"></div></div><div class="bar-val">6</div></div>
-              <div class="bar-row"><div class="bar-lbl">Pest Control</div><div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--red);"></div></div><div class="bar-val">4</div></div>
-              <div class="bar-row"><div class="bar-lbl">Electrical</div><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--blue-600);"></div></div><div class="bar-val">4</div></div>
-            </div>
-          </div>
-          <div class="panel">
-            <div class="panel-header"><div class="panel-title">Status Summary</div></div>
-            <div style="padding:16px 20px;display:flex;flex-direction:column;gap:12px;">
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--gray-100);">
-                <span style="font-size:14px;color:var(--gray-700);">Completed / مكتمل</span>
-                <span class="badge-pill b-closed" style="font-size:13px;padding:5px 14px;">38</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--gray-100);">
-                <span style="font-size:14px;color:var(--gray-700);">In Progress / قيد التنفيذ</span>
-                <span class="badge-pill b-progress" style="font-size:13px;padding:5px 14px;">6</span>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
-                <span style="font-size:14px;color:var(--gray-700);">Pending / معلق</span>
-                <span class="badge-pill b-open" style="font-size:13px;padding:5px 14px;">3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="dash-top">
+    <div>
+      <div class="dash-greeting">Monthly Report — May 2026</div>
+      <div class="dash-date">Auto-generated · Sent on 1st of every month</div>
+    </div>
+    <button class="btn btn-primary" style="font-size:13px;padding:10px 20px;" onclick="downloadPDF()">Export PDF</button>
+  </div>
 
+  <!-- الإحصائيات -->
+  <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="kpi-card kpi-blue">
+      <div class="kpi-label">Total Submitted</div>
+      <div class="kpi-value">47</div>
+    </div>
+
+    <div class="kpi-card kpi-green">
+      <div class="kpi-label">Resolved</div>
+      <div class="kpi-value">38</div>
+    </div>
+
+    <div class="kpi-card kpi-amber">
+      <div class="kpi-label">Pending</div>
+      <div class="kpi-value">9</div>
     </div>
   </div>
+
+  <!-- جدول التفاصيل -->
   <div class="panel" style="margin-top:20px;">
-  <div class="panel-header">
-    <div class="panel-title">تفاصيل البلاغات خلال الشهر</div>
+    <div class="panel-header">
+      <div class="panel-title">تفاصيل البلاغات خلال الشهر</div>
+    </div>
+
+    <table class="ticket-table">
+      <thead>
+        <tr>
+          <th>رقم الطلب</th>
+          <th>المشكلة</th>
+          <th>الموقع</th>
+          <th>الأولوية</th>
+          <th>تاريخ الرفع</th>
+          <th>تاريخ الإغلاق</th>
+          <th>الحالة</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>TK-031</td>
+          <td>AC not cooling</td>
+          <td>Room 301</td>
+          <td>High</td>
+          <td>01 May 2026</td>
+          <td>—</td>
+          <td>Open</td>
+        </tr>
+
+        <tr>
+          <td>TK-027</td>
+          <td>Water leakage</td>
+          <td>Bathroom Block A</td>
+          <td>Medium</td>
+          <td>02 May 2026</td>
+          <td>03 May 2026</td>
+          <td>Closed</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <table class="ticket-table">
-    <thead>
-      <tr>
-        <th>رقم الطلب</th>
-        <th>المشكلة</th>
-        <th>الموقع</th>
-        <th>الأولوية</th>
-        <th>تاريخ الرفع</th>
-        <th>تاريخ الإغلاق</th>
-        <th>الحالة</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>TK-031</td>
-        <td>AC not cooling</td>
-        <td>Room 301</td>
-        <td>High</td>
-        <td>01 May 2026</td>
-        <td>—</td>
-        <td>Open</td>
-      </tr>
-      <tr>
-        <td>TK-027</td>
-        <td>Water leakage</td>
-        <td>Bathroom Block A</td>
-        <td>Medium</td>
-        <td>02 May 2026</td>
-        <td>03 May 2026</td>
-        <td>Closed</td>
-      </tr>
-    </tbody>
-  </table>
 </div>
-</div>
-
 <script>
 // ── DATA ──
 let tickets = [
