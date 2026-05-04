@@ -1078,5 +1078,28 @@ function markAllRead() { tickets.forEach(t=>t.read=true); renderDash(); }
 genQR();
 document.getElementById('dash-date').textContent = new Date().toLocaleDateString('en-AE',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 </script>
+  <form name="helpdesk" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="helpdesk" />
+
+  <h2>تقديم طلب</h2>
+
+  <label>اسم المعلمة:</label><br>
+  <input type="text" name="name" required><br><br>
+
+  <label>القسم:</label><br>
+  <input type="text" name="department" required><br><br>
+
+  <label>نوع الطلب:</label><br>
+  <select name="type" required>
+    <option>صيانة</option>
+    <option>تقنية</option>
+    <option>نظافة</option>
+  </select><br><br>
+
+  <label>تفاصيل الطلب:</label><br>
+  <textarea name="message" required></textarea><br><br>
+
+  <button type="submit">إرسال الطلب</button>
+</form>  
 </body>
 </html>
