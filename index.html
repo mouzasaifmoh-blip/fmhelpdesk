@@ -812,7 +812,9 @@
             <div class="dash-date">Auto-generated · Sent on 1st of every month</div>
           </div>
           <button class="btn btn-primary" style="font-size:13px;padding:10px 20px;" onclick="downloadPDF()">Export PDF</button>
-        <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);">
+</div>
+
+<div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);">
           <div class="kpi-card kpi-blue"><div class="kpi-label">Total Submitted</div><div class="kpi-value">47</div><div class="kpi-change up">May 2026</div></div>
           <div class="kpi-card kpi-green"><div class="kpi-label">Resolved</div><div class="kpi-value">38</div><div class="kpi-change up">81% rate</div></div>
           <div class="kpi-card kpi-amber"><div class="kpi-label">Pending / Open</div><div class="kpi-value">9</div><div class="kpi-change down">3 high priority</div></div>
@@ -851,6 +853,45 @@
 
     </div>
   </div>
+  <div class="panel" style="margin-top:20px;">
+  <div class="panel-header">
+    <div class="panel-title">تفاصيل البلاغات خلال الشهر</div>
+  </div>
+
+  <table class="ticket-table">
+    <thead>
+      <tr>
+        <th>رقم الطلب</th>
+        <th>المشكلة</th>
+        <th>الموقع</th>
+        <th>الأولوية</th>
+        <th>تاريخ الرفع</th>
+        <th>تاريخ الإغلاق</th>
+        <th>الحالة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TK-031</td>
+        <td>AC not cooling</td>
+        <td>Room 301</td>
+        <td>High</td>
+        <td>01 May 2026</td>
+        <td>—</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td>TK-027</td>
+        <td>Water leakage</td>
+        <td>Bathroom Block A</td>
+        <td>Medium</td>
+        <td>02 May 2026</td>
+        <td>03 May 2026</td>
+        <td>Closed</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </div>
 
 <script>
